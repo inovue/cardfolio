@@ -1,0 +1,1 @@
+import{u as r,j as t}from"./client-CeI3mkP-.js";import"./streaming-D6dU0y4W.js";function c(){const[n,e]=r(0);return t("div",{children:[t("p",{class:"py-2 text-2xl",children:n}),t("button",{type:"button",class:"btn btn-primary",onClick:()=>e(n+1),children:"Increment"})]})}export{c as default};
