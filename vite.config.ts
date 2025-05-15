@@ -11,6 +11,14 @@ export default defineConfig(({ mode }) => {
   if (mode === 'client') {
     return {
       base,
+      build: {
+        rollupOptions: {
+          input: ['/app/style.css'],
+          output: {
+            assetFileNames: 'app/[name].[ext]',
+          },
+        },
+      },
       plugins: [client()],
     };
   }
@@ -20,13 +28,9 @@ export default defineConfig(({ mode }) => {
       emptyOutDir: false,
     },
     plugins: [
-      honox({
-        client: {
-          input: ['/app/style.css'],
-        },
-      }),
+      honox(),
+      tailwindcss(),
       ssg({ entry }),
-      tailwindcss()
     ],
   };
 });

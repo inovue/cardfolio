@@ -9,7 +9,6 @@ export function LucideIcon(props: Props) {
   const {
     icon
   } = props
-  console.log(props)
   if (!icon) {
     return <svg />
   }

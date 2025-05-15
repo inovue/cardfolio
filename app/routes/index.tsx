@@ -1,5 +1,4 @@
 import { createRoute } from 'honox/factory'
-import Counter from '../islands/counter'
 import HolographicCard from '../islands/holographic-card'
 import { Plus } from 'lucide'
 
