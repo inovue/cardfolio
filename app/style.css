@@ -1,2 +1,10 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+
+body {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path d="M 10 0 L 10 20 M 0 10 L 20 10" stroke="%23e0e0e0" stroke-width="0.5" /></svg>');
+    background-size: 20px 20px;
+    background-repeat: repeat;
+    min-height: 100dvh;
+}
