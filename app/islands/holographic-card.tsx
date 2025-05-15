@@ -131,7 +131,7 @@ export default function HolographicCard({
       <button 
         ref={cardRef}
         type="button"
-        className="relative w-[22rem] aspect-[27/43] rounded-lg perspective-[1000px] border-0 bg-transparent p-0"
+        className="relative w-[calc(100dvw-2rem)] max-w-sm aspect-[27/43] rounded-lg perspective-[1000px] border-0 bg-transparent p-0"
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -191,7 +191,7 @@ export default function HolographicCard({
             </div>
             
             {/* 下部の情報エリア */}
-            <div className="w-full border-2 border-gray-800/70 z-30 text-white whitespace-pre-wrap break-words text-left bg-black/50 p-4 rounded-lg leading-tight">
+            <div className="w-full border-2 border-gray-800/70 z-30 text-white whitespace-pre-wrap break-words text-left bg-black/50 p-4 rounded-lg leading-tight text-sm sm:text-base">
                 {frontDescription}
             </div>
             
