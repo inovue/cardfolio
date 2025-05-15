@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 const entry = './app/server.ts';
 
 export default defineConfig(({ mode }) => {
-  const base = mode === 'production' ? '/<repository-name>' : '/'; // リポジトリ名を指定
+  const base = mode === 'production' ? '/cardfolio/' : '/'; // リポジトリ名を指定
   if (mode === 'client') {
     return {
       base,
