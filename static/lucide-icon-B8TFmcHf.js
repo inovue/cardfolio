@@ -1,1 +1,0 @@
-import{j as r,b as t}from"./client-DO2Tftf4.js";import"./streaming-D9yn6341.js";function m(i){const{icon:o}=i;return o?r("svg",{viewBox:"0 0 24 24",children:o.map(([n,s])=>t(n,{...s}))}):r("svg",{})}export{m as LucideIcon};
