@@ -131,7 +131,7 @@ export default function HolographicCard({
       <button 
         ref={cardRef}
         type="button"
-        className="relative w-sm aspect-[27/43] rounded-lg cursor-pointer perspective-[1000px] border-0 bg-transparent p-0"
+        className="relative w-sm aspect-[27/43] rounded-lg perspective-[1000px] border-0 bg-transparent p-0"
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
