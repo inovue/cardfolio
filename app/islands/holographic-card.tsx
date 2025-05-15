@@ -104,7 +104,7 @@ export default function HolographicCard() {
       <button 
         ref={cardRef}
         type="button"
-        className="relative w-64 h-96 rounded-xl cursor-pointer perspective-1000 border-0 bg-transparent p-0"
+        className="relative w-sm aspect-[27/43] rounded-lg cursor-pointer perspective-[1000px] border-0 bg-transparent p-0"
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -112,12 +112,9 @@ export default function HolographicCard() {
         onClick={handleCardClick}
         onKeyPress={handleKeyPress}
         aria-label="クリックしてカードを裏返す"
-        style={{
-          perspective: '1000px'
-        }}
       >
         <div 
-          className="relative w-full h-full transition-transform duration-500 transform-style-preserve-3d"
+          className="relative w-full h-full transition-transform duration-500 transform-style-preserve-3d overflow-hidden"
           style={{
             transform: `rotateX(${isHovering ? rotation.x : 0}deg) rotateY(${isHovering ? rotation.y : 0}deg) ${isFlipped ? 'rotateY(180deg)' : ''}`,
             transformStyle: 'preserve-3d',
@@ -126,7 +123,7 @@ export default function HolographicCard() {
         >
           {/* カード前面 */}
           <div 
-            className="absolute w-full h-full rounded-xl border-2 border-yellow-300 overflow-hidden backface-hidden"
+            className="absolute w-full h-full overflow-hidden backface-hidden p-4 flex flex-col justify-between"
             style={{
               backfaceVisibility: 'hidden',
               transformStyle: 'preserve-3d',
@@ -135,9 +132,39 @@ export default function HolographicCard() {
             }}
           >
             {/* カードのメインイメージ */}
-            <div className="absolute inset-0 flex items-center justify-center bg-blue-800 z-10">
-              <div className="w-48 h-48 rounded-full bg-yellow-400 flex items-center justify-center">
-                <div className="text-3xl font-bold">ピカチュウ</div>
+            <div className="absolute inset-0 z-10">
+              <img 
+                src="https://placehold.jp/540x860.png" 
+                alt="カード前面の画像" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            {/* 上部の情報エリア */}
+            <div className="w-full p-4 border border-gray-700 z-30">
+              <div className="flex justify-between items-center">
+                <h2 className="text-white text-xl font-bold">カードタイトル</h2>
+                <div className="flex space-x-2">
+                  <a 
+                    href="https://twitter.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-white hover:text-yellow-300"
+                    aria-label="Twitterで共有"
+                  >
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" role="img">
+                      <title>Twitter</title>
+                      <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            {/* 下部の情報エリア */}
+            <div className="w-full p-4 border border-gray-700 z-30">
+              <div className="text-white">
+                <p className="text-sm">カードの説明文がここに入ります。このカードは特別な効果を持っています。</p>
               </div>
             </div>
             
@@ -146,12 +173,6 @@ export default function HolographicCard() {
               className="absolute inset-0 opacity-50 transition-opacity duration-300 z-20 mix-blend-overlay"
               style={getHolographicStyle()}
             />
-            
-            {/* カード枠と情報 */}
-            <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-yellow-600 to-transparent z-30">
-              <div className="text-white font-bold">HP: 60</div>
-              <div className="text-white">でんき</div>
-            </div>
           </div>
           
           {/* カード裏面 */}
@@ -164,9 +185,11 @@ export default function HolographicCard() {
             }}
           >
             <div className="flex h-full items-center justify-center">
-              <div className="w-32 h-32 rounded-full bg-white flex items-center justify-center">
-                <div className="text-xl font-bold text-red-600">ポケモン</div>
-              </div>
+              <img 
+                src="https://placehold.jp/540x860.png" 
+                alt="カード裏面の画像" 
+                className="w-full h-full object-cover rounded-xl"
+              />
             </div>
             
             {/* 裏面のホログラフィックオーバーレイ */}
