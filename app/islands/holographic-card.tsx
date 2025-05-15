@@ -150,7 +150,7 @@ export default function HolographicCard({
         >
           {/* カード前面 */}
           <div 
-            className="absolute w-full h-full overflow-hidden p-4 flex flex-col justify-between rounded-xl"
+            className="absolute w-full h-full overflow-hidden p-8 flex flex-col justify-between rounded-xl"
             style={{
               backfaceVisibility: 'hidden',
               transformStyle: 'preserve-3d',
@@ -168,7 +168,8 @@ export default function HolographicCard({
             </div>
             
             {/* 上部の情報エリア */}
-            <div className="w-full p-4 border border-gray-700 z-30">
+            <div className="w-full border-2 border-gray-800/70 z-30 bg-black/50 px-4 py-1 rounded-lg">
+                
               <div className="flex justify-between items-center">
                 <h2 className="text-white text-xl font-bold">{frontTitle}</h2>
                 <div className="flex space-x-2">
@@ -190,10 +191,8 @@ export default function HolographicCard({
             </div>
             
             {/* 下部の情報エリア */}
-            <div className="w-full p-4 border border-gray-700 z-30">
-              <div className="text-white">
-                <p className="text-sm">{frontDescription}</p>
-              </div>
+            <div className="w-full border-2 border-gray-800/70 z-30 text-white whitespace-pre-wrap break-words text-left bg-black/50 p-4 rounded-lg leading-tight">
+                {frontDescription}
             </div>
             
             {/* ホログラフィックオーバーレイ */}
