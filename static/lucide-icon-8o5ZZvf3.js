@@ -1,1 +1,0 @@
-import{j as i,b as e}from"./client-CeI3mkP-.js";import"./streaming-D6dU0y4W.js";function m(o){const{icon:n}=o;return console.log(o),n?i("svg",{viewBox:"0 0 24 24",children:n.map(([r,c])=>e(r,{...c}))}):i("svg",{})}export{m as LucideIcon};

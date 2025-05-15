@@ -1,13 +1,13 @@
 {
-  "_streaming-D6dU0y4W.js": {
-    "file": "static/streaming-D6dU0y4W.js",
+  "_streaming-D9yn6341.js": {
+    "file": "static/streaming-D9yn6341.js",
     "name": "streaming",
     "imports": [
       "app/client.ts"
     ]
   },
   "app/client.ts": {
-    "file": "static/client-CeI3mkP-.js",
+    "file": "static/client-DO2Tftf4.js",
     "name": "client",
     "src": "app/client.ts",
     "isEntry": true,
@@ -20,38 +20,43 @@
     ]
   },
   "app/islands/counter.tsx": {
-    "file": "static/counter-CFr-eyDD.js",
+    "file": "static/counter-B8q-Da5Q.js",
     "name": "counter",
     "src": "app/islands/counter.tsx",
     "isDynamicEntry": true,
     "imports": [
       "app/client.ts",
-      "_streaming-D6dU0y4W.js"
+      "_streaming-D9yn6341.js"
     ]
   },
   "app/islands/holographic-card.tsx": {
-    "file": "static/holographic-card-CaGr7oKx.js",
+    "file": "static/holographic-card-BuhA8BDh.js",
     "name": "holographic-card",
     "src": "app/islands/holographic-card.tsx",
     "isDynamicEntry": true,
     "imports": [
       "app/client.ts",
-      "_streaming-D6dU0y4W.js",
+      "_streaming-D9yn6341.js",
       "app/islands/lucide-icon.tsx"
     ]
   },
   "app/islands/lucide-icon.tsx": {
-    "file": "static/lucide-icon-8o5ZZvf3.js",
+    "file": "static/lucide-icon-B8TFmcHf.js",
     "name": "lucide-icon",
     "src": "app/islands/lucide-icon.tsx",
     "isDynamicEntry": true,
     "imports": [
       "app/client.ts",
-      "_streaming-D6dU0y4W.js"
+      "_streaming-D9yn6341.js"
     ]
   },
+  "app/style.css": {
+    "file": "app/style.css",
+    "src": "app/style.css",
+    "isEntry": true
+  },
   "node_modules/honox/dist/client/runtime.js": {
-    "file": "static/runtime-C-4caNl8.js",
+    "file": "static/runtime-CD6DIp4X.js",
     "name": "runtime",
     "src": "node_modules/honox/dist/client/runtime.js",
     "isDynamicEntry": true,
