@@ -5,17 +5,15 @@ import { Plus } from 'lucide'
 
 
 export default createRoute((c) => {
-  const name = c.req.query('name') ?? 'Hono'
   return c.render(
-    <div class="py-8 text-center">
-      <title>{name}</title>
-      <h1 class="text-3xl font-bold">Hello, {name}!</h1>
-      <Counter />
+    <div class="flex justify-center items-center h-[100dvh] overflow-hidden">
       <HolographicCard 
-        frontImageUrl="https://placehold.jp/540x860.png"
+        frontImageUrl="/images/front.webp"
         frontTitle="カードタイトル"
         frontDescription="カードの説明文がここに入ります。このカードは特別な効果を持っています。"
         frontHasHolographic={true}
+        backImageUrl="/images/back.webp"
+        backHasHolographic={false}
         socialLinks={[
           {
             url: 'https://example.com',

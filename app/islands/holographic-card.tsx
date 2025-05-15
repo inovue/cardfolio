@@ -38,7 +38,7 @@ export default function HolographicCard({
   frontHasHolographic = true,
   socialLinks = [],
   backImageUrl = "https://placehold.jp/540x860.png",
-  backHasHolographic = true,
+  backHasHolographic = false,
 }: CardProps) {
   // カードの回転状態を管理するstate
   const [isFlipped, setIsFlipped] = useState(false);
@@ -144,7 +144,7 @@ export default function HolographicCard({
         aria-label="クリックしてカードを裏返す"
       >
         <div 
-          className="relative w-full h-full transition-transform duration-500 transform-style-preserve-3d overflow-hidden"
+          className="relative w-full h-full transition-transform duration-500 transform-style-preserve-3d"
           style={{
             transform: `rotateX(${isHovering ? rotation.x : 0}deg) rotateY(${isHovering ? rotation.y : 0}deg) ${isFlipped ? 'rotateY(180deg)' : ''}`,
             transformStyle: 'preserve-3d',
@@ -153,7 +153,7 @@ export default function HolographicCard({
         >
           {/* カード前面 */}
           <div 
-            className="absolute w-full h-full overflow-hidden backface-hidden p-4 flex flex-col justify-between"
+            className="absolute w-full h-full overflow-hidden p-4 flex flex-col justify-between rounded-xl"
             style={{
               backfaceVisibility: 'hidden',
               transformStyle: 'preserve-3d',
@@ -211,7 +211,7 @@ export default function HolographicCard({
           
           {/* カード裏面 */}
           <div 
-            className="absolute w-full h-full rounded-xl border-2 border-yellow-300 bg-red-600 backface-hidden"
+            className="absolute w-full h-full rounded-xl"
             style={{
               backfaceVisibility: 'hidden',
               transform: 'rotateY(180deg) translateZ(1px)',
