@@ -9,8 +9,8 @@ export default jsxRenderer(({ children }) => {
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href={`${base}favicon.ico`} />
-        <Link href={`${base}app/style.css`} rel="stylesheet" />
-        <Script src={`${base}app/client.ts`} async />
+        <Link href="/app/style.css" rel="stylesheet" />
+        <Script src="/app/client.ts" async />
       </head>
       <body>{children}</body>
     </html>

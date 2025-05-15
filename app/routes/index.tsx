@@ -1,6 +1,5 @@
 import { createRoute } from 'honox/factory'
 import HolographicCard from '../islands/holographic-card'
-import { Plus } from 'lucide'
 
 
 export default createRoute((c) => {
@@ -17,7 +16,6 @@ export default createRoute((c) => {
         socialLinks={[
           {
             url: 'https://example.com',
-            icon: Plus,
             label: 'Facebook'
           }
         ]}

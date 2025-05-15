@@ -6,7 +6,6 @@
       "dependencies": {
         "hono": "^4.7.9",
         "honox": "^0.1.40",
-        "lucide": "^0.510.0",
       },
       "devDependencies": {
         "@hono/vite-build": "^1.3.0",
@@ -421,8 +420,6 @@
     "lightningcss-win32-arm64-msvc": ["lightningcss-win32-arm64-msvc@1.29.2", "", { "os": "win32", "cpu": "arm64" }, "sha512-nL7zRW6evGQqYVu/bKGK+zShyz8OVzsCotFgc7judbt6wnB2KbiKKJwBE4SGoDBQ1O94RjW4asrCjQL4i8Fhbw=="],
 
     "lightningcss-win32-x64-msvc": ["lightningcss-win32-x64-msvc@1.29.2", "", { "os": "win32", "cpu": "x64" }, "sha512-EdIUW3B2vLuHmv7urfzMI/h2fmlnOQBk1xlsDxkN1tCWKjNFjfLhGxYk8C8mzpSfr+A6jFFIi8fU6LbQGsRWjA=="],
-
-    "lucide": ["lucide@0.510.0", "", {}, "sha512-LcJJCBTi3GTW6cGlUoLdOTz0KTtLCqvHf/aIxIjWO/OEUyduTyvUI2l1m/uPEBmp3TkQTfe2hy7aPjTNA6CLKQ=="],
 
     "magic-string": ["magic-string@0.30.17", "", { "dependencies": { "@jridgewell/sourcemap-codec": "^1.5.0" } }, "sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA=="],
 

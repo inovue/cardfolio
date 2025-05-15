@@ -8,27 +8,16 @@ const entry = './app/server.ts';
 
 export default defineConfig(({ mode }) => {
   const base = mode === 'production' ? '/cardfolio/' : '/'; // リポジトリ名を指定
-  if (mode === 'client') {
-    return {
-      base,
-      build: {
-        rollupOptions: {
-          input: ['/app/style.css'],
-          output: {
-            assetFileNames: 'app/[name].[ext]',
-          },
-        },
-      },
-      plugins: [client()],
-    };
-  }
+
   return {
     base,
     build: {
       emptyOutDir: false,
     },
     plugins: [
-      honox(),
+      honox({
+        client: { input: ['./app/style.css'] }
+      }),
       tailwindcss(),
       ssg({ entry }),
     ],

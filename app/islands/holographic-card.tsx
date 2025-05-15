@@ -1,6 +1,4 @@
 import { useState, useRef } from 'hono/jsx';
-import { LucideIcon } from "../islands/lucide-icon"
-import type { IconNode } from "lucide"
 
 
 interface Position {
@@ -10,7 +8,6 @@ interface Position {
 
 interface SocialLink {
   url: string;
-  icon: IconNode;
   label: string;
 }
 
@@ -185,7 +182,6 @@ export default function HolographicCard({
                       aria-label={link.label}
                     >
                       <div className="w-6 h-6" >
-                        <LucideIcon icon={link.icon} />
                       </div>
                     </a>
                   ))}
