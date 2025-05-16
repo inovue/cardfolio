@@ -1,4 +1,4 @@
-import { useState, useRef } from 'hono/jsx';
+import { useState, useRef, useEffect } from 'hono/jsx';
 
 
 interface Position {
@@ -38,13 +38,27 @@ export default function HolographicCard({
   backHasHolographic = false,
 }: CardProps) {
   // カードの回転状態を管理するstate
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(true); // 初期状態を裏向きに
   const [rotation, setRotation] = useState<Position>({ x: 0, y: 0 });
   const [position, setPosition] = useState<Position>({ x: 0, y: 0 });
   const [glowPosition, setGlowPosition] = useState<Position>({ x: 50, y: 50 });
   const [isHovering, setIsHovering] = useState(false);
+  const [isInitialized, setIsInitialized] = useState(false);
   
   const cardRef = useRef<CardRef>(null);
+  
+  // 初期アニメーション
+  useEffect(() => {
+    // マウント直後に中央に移動
+    requestAnimationFrame(() => {
+      setIsInitialized(true);
+      
+      // 移動完了後に反転
+      setTimeout(() => {
+        setIsFlipped(false);
+      }, 1000); // 移動アニメーションの時間と同じ
+    });
+  }, []);
   
   // マウス位置や傾きを更新する関数
   const updateCardTransform = (normalizedX: number, normalizedY: number) => {
@@ -139,6 +153,11 @@ export default function HolographicCard({
         onClick={handleCardClick}
         onKeyPress={handleKeyPress}
         aria-label="クリックしてカードを裏返す"
+        style={{
+          transform: isInitialized ? 'translateY(0)' : 'translateY(100vh)',
+          transition: 'transform 1s cubic-bezier(0.4, 0, 0.2, 1)',
+          willChange: 'transform'
+        }}
       >
         <div 
           className="relative w-full h-full transition-transform duration-500 transform-style-preserve-3d"
