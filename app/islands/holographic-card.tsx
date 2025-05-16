@@ -181,7 +181,7 @@ export default function HolographicCard({
             
             {/* 上部の情報エリア */}
             <div className="w-full border-2 border-gray-800/70 z-30 bg-black/50 px-4 py-1 rounded-lg">
-              <h2 className="text-white text-xl font-bold">{frontTitle}</h2>                
+              <h2 className="text-white text-lg tracking-tight font-bold">{frontTitle}</h2>                
             </div>
 
             
