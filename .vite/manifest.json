@@ -1,13 +1,13 @@
 {
-  "_honox-island-DfYBJRij.js": {
-    "file": "static/honox-island-DfYBJRij.js",
+  "_honox-island-D7x3l9TA.js": {
+    "file": "static/honox-island-D7x3l9TA.js",
     "name": "honox-island",
     "imports": [
       "app/client.ts"
     ]
   },
   "app/client.ts": {
-    "file": "static/client-oIeWrtHw.js",
+    "file": "static/client-CQD9JVZW.js",
     "name": "client",
     "src": "app/client.ts",
     "isEntry": true,
@@ -19,23 +19,23 @@
     ]
   },
   "app/islands/counter.tsx": {
-    "file": "static/counter-CvS7ih1X.js",
+    "file": "static/counter-Cc5I89mV.js",
     "name": "counter",
     "src": "app/islands/counter.tsx",
     "isDynamicEntry": true,
     "imports": [
       "app/client.ts",
-      "_honox-island-DfYBJRij.js"
+      "_honox-island-D7x3l9TA.js"
     ]
   },
   "app/islands/holographic-card.tsx": {
-    "file": "static/holographic-card-7YimAi-l.js",
+    "file": "static/holographic-card-DMp92ZiN.js",
     "name": "holographic-card",
     "src": "app/islands/holographic-card.tsx",
     "isDynamicEntry": true,
     "imports": [
       "app/client.ts",
-      "_honox-island-DfYBJRij.js"
+      "_honox-island-D7x3l9TA.js"
     ]
   },
   "app/style.css": {
@@ -44,7 +44,7 @@
     "isEntry": true
   },
   "node_modules/honox/dist/client/runtime.js": {
-    "file": "static/runtime-DP1rSmsx.js",
+    "file": "static/runtime-CVIUrWhp.js",
     "name": "runtime",
     "src": "node_modules/honox/dist/client/runtime.js",
     "isDynamicEntry": true,

@@ -1,1 +1,0 @@
-import{j as n,u as e}from"./client-oIeWrtHw.js";import"./honox-island-DfYBJRij.js";const o=function(){const[t,r]=e(0);return n("div",{children:[n("p",{class:"py-2 text-2xl",children:t}),n("button",{type:"button",class:"btn btn-primary",onClick:()=>r(t+1),children:"Increment"})]})},c=function(t){return n(o,{...t})},u=!0;export{u as __importing_islands,c as default};
