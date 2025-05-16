@@ -167,28 +167,23 @@ export default function HolographicCard({
               />
             </div>
             
+            {/* Social Links */}
+            <div class="flex flex-col gap-2 absolute top-[5.5rem] right-[2rem] z-30 opacity-90">
+              {socialLinks.map((link) => (
+                <a href={link.url} key={`social-link-${link.url}`} className="btn btn-circle btn-neutral p-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512" aria-label={link.label || "Social link"}>
+                    <title>{link.label || "Social link"}</title>
+                    <path fill="currentColor" d="M389.2 48h70.6L305.6 224.2L487 464H345L233.7 318.6L106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9zm-24.8 373.8h39.1L151.1 88h-42z" />
+                  </svg>
+                </a>
+              ))}
+            </div>
+            
             {/* 上部の情報エリア */}
             <div className="w-full border-2 border-gray-800/70 z-30 bg-black/50 px-4 py-1 rounded-lg">
-                
-              <div className="flex justify-between items-center">
-                <h2 className="text-white text-xl font-bold">{frontTitle}</h2>
-                <div className="flex space-x-2">
-                  {socialLinks.map((link, index) => (
-                    <a 
-                      key={index}
-                      href={link.url} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="text-white hover:text-yellow-300"
-                      aria-label={link.label}
-                    >
-                      <div className="w-6 h-6" >
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
+              <h2 className="text-white text-xl font-bold">{frontTitle}</h2>                
             </div>
+
             
             {/* 下部の情報エリア */}
             <div className="w-full border-2 border-gray-800/70 z-30 text-white whitespace-pre-wrap break-words text-left bg-black/50 p-4 rounded-lg leading-tight text-sm sm:text-base">

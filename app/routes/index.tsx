@@ -24,8 +24,8 @@ Bun、Vite、Hono、Tailwind CSSを組み合わせた高速な開発環境を好
         backHasHolographic={false}
         socialLinks={[
           {
-            url: 'https://example.com',
-            label: 'Facebook'
+            url: 'https://x.com/inovue3',
+            label: 'X'
           }
         ]}
       />
