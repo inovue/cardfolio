@@ -154,7 +154,7 @@ export default function HolographicCard({
         onKeyPress={handleKeyPress}
         aria-label="クリックしてカードを裏返す"
         style={{
-          transform: isInitialized ? 'translateY(0)' : 'translateY(100vh)',
+          transform: isInitialized ? 'translateY(0)' : 'translateY(-100vh)',
           transition: 'transform 1s cubic-bezier(0.4, 0, 0.2, 1)',
           willChange: 'transform'
         }}
