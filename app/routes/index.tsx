@@ -8,7 +8,7 @@ export default createRoute((c) => {
     <div class="flex justify-center items-center h-[100dvh] overflow-hidden">
       <HolographicCard 
         frontImageUrl={`${base}images/front.webp`}
-        frontTitle="DXエンジニア、イノビュー"
+        frontTitle="骨董エンジニ屋、イノビュー"
         frontDescription={
 `[Language]
 TypeScriptとPythonを主に使用。静的型と柔軟性のバランスを活かした開発を好みます。
