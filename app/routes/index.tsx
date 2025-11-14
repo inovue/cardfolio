@@ -1,5 +1,6 @@
 import { createRoute } from 'honox/factory'
 import HolographicCard from '../islands/holographic-card'
+import { config } from '../config'
 
 
 export default createRoute((c) => {
@@ -7,27 +8,13 @@ export default createRoute((c) => {
   return c.render(
     <div class="flex justify-center items-center h-[100dvh] overflow-hidden">
       <HolographicCard 
-        frontImageUrl={`${base}images/front.webp`}
-        frontTitle="骨董エンジニ屋、イノビュー"
-        frontDescription={
-`[Language]
-TypeScriptとPythonを主に使用。静的型と柔軟性のバランスを活かした開発を好みます。
-
-[Editor]
-CursorとCodexを使い、AIと協調するコーディングスタイルを実践中。
-
-[Tools]
-Bun、Vite、Hono、Tailwind CSSを組み合わせた高速な開発環境を好みます。`
-}
+        frontImageUrl={config.cardImage}
+        frontTitle={config.title}
+        frontDescription={config.description}
         frontHasHolographic={true}
-        backImageUrl={`${base}images/back.webp`}
+        backImageUrl={config.backgroundImage}
         backHasHolographic={false}
-        socialLinks={[
-          {
-            url: 'https://x.com/inovue3',
-            label: 'X'
-          }
-        ]}
+        socialLinks={config.socialLinks}
       />
     </div>
   )
