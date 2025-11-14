@@ -5,8 +5,7 @@ export const config = {
   description: `Cursor最高!! ClaudeCode万歳!!
 課金地獄のから脱AI課金を目指してます。
 
-VSCode + OpenRourerの無料モデルで
-結構満足している!?
+VSCode + OpenRouterの無料モデルで結構満足している!?
 
 推しAIモデルは "Grok Code Fast 1"
 `,
