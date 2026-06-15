@@ -17,7 +17,7 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       honox({
-        client: { input: ['./app/style.css'] },
+        client: { input: ['./app/client.ts', './app/style.css'] },
         devServer: {
           base: process.env.NODE_ENV === 'production' ? '/cardfolio/' : '/'
         }
