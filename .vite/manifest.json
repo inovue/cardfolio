@@ -1,4 +1,42 @@
 {
+  "_components-BnynDBqy.js": {
+    "file": "static/components-BnynDBqy.js",
+    "name": "components",
+    "imports": [
+      "app/client.ts"
+    ]
+  },
+  "app/client.ts": {
+    "file": "static/client-BiwiRRtP.js",
+    "name": "client",
+    "src": "app/client.ts",
+    "isEntry": true,
+    "dynamicImports": [
+      "app/islands/counter.tsx",
+      "app/islands/holographic-card.tsx",
+      "node_modules/honox/dist/client/runtime.js"
+    ]
+  },
+  "app/islands/counter.tsx": {
+    "file": "static/counter-Bojo_yes.js",
+    "name": "counter",
+    "src": "app/islands/counter.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "app/client.ts",
+      "_components-BnynDBqy.js"
+    ]
+  },
+  "app/islands/holographic-card.tsx": {
+    "file": "static/holographic-card-C3HlAQQK.js",
+    "name": "holographic-card",
+    "src": "app/islands/holographic-card.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "app/client.ts",
+      "_components-BnynDBqy.js"
+    ]
+  },
   "app/style.css": {
     "file": "static/style-Bc9-dpl-.css",
     "name": "style",
@@ -7,5 +45,14 @@
     ],
     "src": "app/style.css",
     "isEntry": true
+  },
+  "node_modules/honox/dist/client/runtime.js": {
+    "file": "static/runtime-BKAIS5af.js",
+    "name": "runtime",
+    "src": "node_modules/honox/dist/client/runtime.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "app/client.ts"
+    ]
   }
 }

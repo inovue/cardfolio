@@ -1,0 +1,1 @@
+import{o as e}from"./client-BiwiRRtP.js";import{t}from"./components-BnynDBqy.js";var n=function(){let[n,r]=e(0);return t(`div`,{children:[t(`p`,{class:`py-2 text-2xl`,children:n}),t(`button`,{type:`button`,class:`btn btn-primary`,onClick:()=>r(n+1),children:`Increment`})]})},r=function(e){return t(n,{...e})},i=!0;export{i as __importing_islands,r as default};
