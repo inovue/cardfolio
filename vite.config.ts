@@ -7,7 +7,8 @@ import tailwindcss from '@tailwindcss/vite';
 const entry = './app/server.ts';
 
 export default defineConfig(({ mode }) => {
-  const base = mode === 'production' ? '/cardfolio/' : '/'; // リポジトリ名を指定
+  const base = process.env.NODE_ENV === 'production' ? '/cardfolio/' : '/'; // リポジトリ名を指定
+  console.log('DEBUG VITE CONFIG (NODE_ENV):', { mode, base, NODE_ENV: process.env.NODE_ENV });
 
   return {
     base,
@@ -16,7 +17,10 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [
       honox({
-        client: { input: ['./app/style.css'] }
+        client: { input: ['./app/style.css'] },
+        devServer: {
+          base: process.env.NODE_ENV === 'production' ? '/cardfolio/' : '/'
+        }
       }),
       tailwindcss(),
       ssg({ entry }),
